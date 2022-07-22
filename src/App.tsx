@@ -1,7 +1,7 @@
 const App = () =>  {
 	return (
 		<h1>
-      		Welcome TBG Admin
+      		Welcome TBG Admin Deploy!
 		</h1>
 	);
 };
