@@ -1,14 +1,13 @@
-name: Deployment Production
+name: Deployment Development
 
 on: 
   push: 
-    branches: [ main ]
+    branches: [ develop ]
   pull_request:
-    branches: [ main ]
+    branches: [ develop ]
     types: [opened, synchronize]
 
 jobs:
-
   avoid_reduncy: 
     runs-on: ubuntu-latest
     steps:
@@ -31,6 +30,7 @@ jobs:
         run: yarn install
       - name: Lint
         run: yarn lint
+
 
   build: 
     runs-on: ubuntu-latest
@@ -72,7 +72,7 @@ jobs:
         run: yarn test
 
   deploy:
-    needs: [lint, build]
+    needs: [test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -84,7 +84,6 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.12.12 
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: ${{secrets.HEROKU_APP}}
+          heroku_app_name: ${{secrets.HEROKU_APP_DEV}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
-
 
