@@ -1,3 +1,120 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root {
+        --color-white: #fff;
+        --color-info-dark: #7d8da1;
+        --color-info-light: #dce1eb;
+        --color-dark: #363949;
+        --color-light: rgba(132, 139, 200, 0.18);
+        --color-primary-variant: #111e88;
+        --color-dark-variant: #677483;
+        --color-background: #f6f6f9;
+        --box-shadow: 0 2rem 3rem var(--color-light);
+    }
+
+    .dark-theme-variables {
+        --color-background: #181a1e;
+        --color-white: #202528;
+        --color-dark: #edeffd;
+        --color-dark-variant: #a3bdcc;
+        --color-light: rgba(0, 0, 0, 0.4);
+        --box-shadow: 0 2rem 3rem var(--color-light);
+    }
+
+    @font-face {
+        font-family: Poppins;
+        font-weight: 400;
+        src: url(assets/fonts/Poppins-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: Poppins;
+        font-weight: 500;
+        src: url(assets/fonts/Poppins-Medium.ttf);
+    }
+
+    @font-face {
+        font-family: Poppins;
+        font-weight: 600;
+        src: url(assets/fonts/Poppins-SemiBold.ttf);
+    }
+
+    @font-face {
+        font-family: Poppins;
+        font-weight: 700;
+        src: url(assets/fonts/Poppins-Bold.ttf);
+    }
+
+    @font-face {
+        font-family: Poppins;
+        font-weight: 800;
+        src: url(assets/fonts/Poppins-ExtraBold.ttf);
+    }
+
+    body {
+        @apply font-poppins bg-background text-dark;
+    }
+
+    a {
+        @apply text-dark;
+    }
+
+    img {
+        @apply block w-full;
+    }
+
+    h1 {
+        @apply font-extrabold text-28.8px;
+    }
+
+    h2 {
+        @apply font-bold text-22.4px;
+    }
+
+    h3 {
+        @apply text-13.92px;
+    }
+
+    h4 {
+        @apply text-12.8px;
+    }
+
+    h5 {
+        @apply text-12.32px;
+    }
+
+    small {
+        @apply text-xs;
+    }
+
+    .text-muted {
+        @apply text-info-dark;
+    }
+
+    p {
+        @apply text-dark-variant;
+    }
+
+    b {
+        @apply text-dark;
+    }
+
+    .primary {
+        @apply text-primary;
+    }
+
+    .danger {
+        @apply text-danger;
+    }
+
+    .success {
+        @apply text-success;
+    }
+
+    .warning {
+        @apply text-warning;
+    }
+}
