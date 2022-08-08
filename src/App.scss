@@ -1,0 +1,13 @@
+.container-app {
+    @apply 
+        grid 
+        w-96 
+        mx-auto 
+        gap-28.8px 
+        grid-cols-container-app 
+        xl:w-94
+        xl:grid-cols-container-app-xl
+        md:w-full 
+        md:grid-cols-container-app-md
+    ;
+}

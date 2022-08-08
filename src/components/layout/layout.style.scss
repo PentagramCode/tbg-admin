@@ -1,0 +1,177 @@
+aside {
+  @apply 
+    h-screen
+    md:transition-all
+    md:ease-in-out
+    md:duration-300
+    md:fixed 
+  md:bg-white 
+    md:w-72 
+    md:z-3 
+    md:shadow-aside 
+    md:pr-28.8px
+    md:h-screen
+  ;
+
+
+  .top {
+    @apply flex items-center justify-between mt-22.4px;
+
+    .logo {
+      @apply flex items-center gap-12.8px md:ml-4;
+
+      h2 {
+        @apply xl:hidden md:inline;
+      }
+
+      img {
+        @apply w-8 h-8;
+      }
+    }
+
+    .close {
+      @apply hidden md:inline-block md:cursor-pointer;
+    }
+  }
+
+  .sidebar {
+    @apply flex flex-col h-86vh relative top-12;
+
+    a {
+      @apply 
+        flex 
+        text-info-dark 
+        ml-8 
+        gap-4 
+        items-center 
+        relative 
+        h-59.2px 
+        transition 
+        duration-300
+        ease-in-out
+        md:h-54.4px
+        md:w-full
+        xl:w-89.6px
+      ;
+
+      &:last-child {
+        @apply 
+          absolute 
+          bottom-8 
+          w-full 
+          xl:relative
+          xl:mt-28.8px
+          md:absolute
+          md:bottom-20
+        ;
+      }
+
+      h3 {
+        @apply font-medium xl:hidden md:inline;
+      }
+
+      span {
+        @apply text-25.6px transition-all duration-300 ease-in-out;
+      }
+
+      .message-count {
+        @apply bg-danger text-white px-2 text-11px rounded-md 
+      }
+
+      &:hover {
+        @apply text-primary;
+
+        span {
+          @apply ml-4;
+        }
+      }
+    }
+
+    a.active {
+
+      &::before {
+        @apply content-[''] w-6px h-full bg-primary;
+      }
+
+      @apply bg-light text-primary ml-0;
+
+      span {
+        @apply text-primary ml-[calc(1rem_-_3px)]
+        
+      }
+    }
+  }
+}
+
+main {
+  @apply mt-22.4px md:mt-32 md:py-0 md:px-4;
+}
+
+.right {
+  @apply mt-22.4px md:w-94 md:mt-0 md:mx-auto md:mb-16;
+
+  .top {
+    @apply 
+      flex 
+      justify-end 
+      gap-8 
+      md:fixed
+      md:top-0
+      md:left-0
+      md:items-center
+      md:py-0 
+      md:p-12.8px
+      md:h-73.6px
+      md:bg-white
+      md:w-full
+      md:m-0
+      md:z-2
+      md:shadow-right
+    ;
+
+    button {
+      @apply hidden md:inline-block md:bg-transparent md:cursor-pointer md:text-dark md:absolute md:left-4;
+
+      span {
+        @apply text-32px;
+      }
+    }
+
+    .theme-toggler {
+      @apply 
+        bg-light 
+        flex 
+        justify-between 
+        items-center 
+        h-25.6px 
+        w-67.2px 
+        cursor-pointer 
+        rounded-border-radius-1 
+        md:w-70.4px 
+        md:absolute 
+        md:left-66
+      ;
+
+      span {
+        @apply text-19.2px w-1/2 h-full flex items-center justify-center;
+      }
+
+      span.active {
+        @apply bg-primary text-white rounded-border-radius-2;
+      }
+      
+    }
+
+    .profile {
+      @apply flex gap-8 text-right;
+
+      .info {
+        @apply md:hidden;
+      }
+
+      .profile-photo {
+        @apply w-44.8px h-44.8px rounded-50 overflow-hidden
+      }
+    }
+  }
+}
