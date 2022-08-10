@@ -1,0 +1,9 @@
+.theme-toggler {
+    span {
+        @apply text-19.2px w-1/2 h-full flex items-center justify-center;
+    }
+
+    span.active {
+        @apply bg-primary text-white rounded-border-radius-2;
+    }
+}

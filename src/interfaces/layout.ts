@@ -12,4 +12,12 @@ export interface IRoutes {
     icon:string;
 }
 
+/**
+ * This interface describes the properties of the component ToggleDark.
+ * @typeParam { string } className - CSS styles
+ */
+export interface IToggleDark {
+    className: string
+}
+
 

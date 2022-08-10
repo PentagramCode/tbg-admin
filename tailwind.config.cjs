@@ -37,6 +37,9 @@ module.exports = {
 				'70.4px': '4.4rem',
 				'73.6px': '4.6rem',
 				'89.6px': '5.6rem',
+				'336px': '21rem',
+				'340px': '21.25rem',
+				'452px': '28.25rem',
 				94: '94%',
 				96: '96%',
 			},
@@ -83,6 +86,7 @@ module.exports = {
 			boxShadow: {
 				aside: '1rem 3rem 4rem var(--color-light)',
 				right: '0 1rem 1rem var(--color-light)',
+				'box-card': '0 2rem 3rem var(--color-light)'
 			},
 			animation: {
 				'aside-menu': 'showMenu 400ms ease-in-out',
@@ -91,6 +95,7 @@ module.exports = {
 				'showMenu': {
 					to: { left: '0' },
 				},
+
 			},
 			spacing: {
 				66: '66%',
@@ -104,5 +109,7 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/forms'),
+	],
 };

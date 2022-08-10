@@ -3,22 +3,21 @@ import { Link, Route, Routes } from 'react-router-dom';
 // Components
 import { Layout } from '@/components/layout';
 import Dashboard from '@/pages/dashboard';
+import Login from '@/pages/login';
 
 import './App.scss';
 
 const App = () => {
 	return (
-		<div className='container-app'>
-			<Routes>
-				<Route path="/" element={<Layout />}> 
-					<Route index element={<Dashboard />} />
-					<Route path="*" element={<NoMatch />} />
-				</Route>
-			</Routes>
-		</div>
+		<Routes>
+			<Route path="/" element={<Layout />}> 
+				<Route index element={<Dashboard />} />
+				<Route path="*" element={<NoMatch />} />
+			</Route>
+			<Route path="/login" element={<Login />} />
+		</Routes>
 	);
 };
-
 
 function NoMatch() {
 	return (

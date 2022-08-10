@@ -54,8 +54,12 @@
         src: url(assets/fonts/Poppins-ExtraBold.ttf);
     }
 
+    html {
+        @apply h-full
+    }
+
     body {
-        @apply font-poppins bg-background text-dark;
+        @apply font-poppins bg-background text-dark h-full;
     }
 
     a {
